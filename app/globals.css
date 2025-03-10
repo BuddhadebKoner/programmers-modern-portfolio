@@ -1,26 +1,175 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base color variables - dark theme */
+  --background-primary: #14131e;
+  --background-secondary: #1f1d2d;
+  --border-color: #242336;
+  --box-background: #1f1d2d;
+
+  /* Text colors */
+  --text-primary: #c8d5f1;
+  --text-secondary: #747a9c;
+
+  /* Highlight colors */
+  --highlight-primary: #afc772;
+  --highlight-secondary: #c8d5f1;
+
+  /* Accent colors for specific levels */
+  --accent-green-light: #a6d189;
+  --accent-green: #afc772;
+  --accent-yellow: #e5c890;
+  --accent-orange: #ef9f76;
+  --accent-red: #e78284;
+
+  /* Link color */
+  --link-color: #7d92cf;
+  --link-hover: #99aee0;
+
+  /* Foreground/background for inverted sections */
+  --foreground: #242336;
+  --accent-alpha: rgba(175, 199, 114, 0.1);
+  /* #afc772 with 10% opacity */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Light theme overrides */
+.light {
+  --background-primary: #f5f5fa;
+  --background-secondary: #e8e8f0;
+  --border-color: #d1d1e0;
+  --box-background: #ffffff;
+
+  /* Text colors */
+  --text-primary: #333344;
+  --text-secondary: #666677;
+
+  /* Highlight colors */
+  --highlight-primary: #7c9537;
+  --highlight-secondary: #3a4c82;
+
+  /* Accent colors for specific levels - slightly muted for light theme */
+  --accent-green-light: #8ab169;
+  --accent-green: #7c9537;
+  --accent-yellow: #c7ad60;
+  --accent-orange: #d57d51;
+  --accent-red: #c76466;
+
+  /* Link color */
+  --link-color: #4065b8;
+  --link-hover: #2c4c94;
+
+  /* Foreground/background for inverted sections */
+  --foreground: #ffffff;
+  --accent-alpha: rgba(124, 149, 55, 0.1);
+  /* #7c9537 with 10% opacity */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Utility classes based on theme variables */
+.bg-background {
+  background-color: var(--background-primary);
+}
+
+.bg-background-secondary {
+  background-color: var(--background-secondary);
+}
+
+.bg-foreground {
+  background-color: var(--foreground);
+}
+
+.bg-box {
+  background-color: var(--box-background);
+}
+
+.border-theme {
+  border-color: var(--border-color);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-highlight {
+  color: var(--highlight-primary);
+}
+
+.text-highlight-secondary {
+  color: var(--highlight-secondary);
+}
+
+.text-main-text {
+  color: var(--text-primary);
+}
+
+/* Accent utilities */
+.accent-green-light {
+  color: var(--accent-green-light);
+}
+
+.accent-green {
+  color: var(--accent-green);
+}
+
+.accent-yellow {
+  color: var(--accent-yellow);
+}
+
+.accent-orange {
+  color: var(--accent-orange);
+}
+
+.accent-red {
+  color: var(--accent-red);
+}
+
+/* Backgrounds for accents */
+.bg-accent-green-light {
+  background-color: var(--accent-green-light);
+}
+
+.bg-accent-green {
+  background-color: var(--accent-green);
+}
+
+.bg-accent-yellow {
+  background-color: var(--accent-yellow);
+}
+
+.bg-accent-orange {
+  background-color: var(--accent-orange);
+}
+
+.bg-accent-red {
+  background-color: var(--accent-red);
+}
+
+.bg-accent {
+  background-color: var(--accent-alpha);
+}
+
+/* Link styles */
+.link-color {
+  color: var(--link-color);
+}
+
+.hover\:link-hover:hover {
+  color: var(--link-hover);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background);
+  color: var(--main-text);
+  font-family: "JetBrains Mono", Monaco, monospace;
 }
