@@ -9,7 +9,7 @@ const AboutPage = () => {
                   # Documentation
                </h1>
                <p className="text-sm sm:text-base text-primary md:max-w-2xl">
-                  I'm IronMan, a dedicated web developer specializing in Next.js and the MERN/Node environment. I focus on writing clean, efficient code with minimal lines while ensuring up-to-date practices.
+                  I&apos;m IronMan, a dedicated web developer specializing in Next.js and the MERN/Node environment. I focus on writing clean, efficient code with minimal lines while ensuring up-to-date practices.
                </p>
             </section>
 

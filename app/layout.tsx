@@ -31,7 +31,9 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <Navbar />
-          {children}
+          <section className="z-10">
+            {children}
+          </section>
         </ThemeProvider>
       </body>
     </html>

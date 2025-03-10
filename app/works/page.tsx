@@ -21,7 +21,7 @@ const page = () => {
                   # Showcase
                </h1>
                <p className="text-sm sm:text-base text-primary md:max-w-2xl">
-                  All the presentable projects I've made throughout the years
+                  All the presentable projects I&apos;ve made throughout the years
                </p>
             </section>
             <section className='animate-fadeIn flex flex-col gap-8'>

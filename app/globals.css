@@ -169,7 +169,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--background);
-  color: var(--main-text);
   font-family: "JetBrains Mono", Monaco, monospace;
+  overflow-y: auto;
+  overflow-x: hidden;
 }

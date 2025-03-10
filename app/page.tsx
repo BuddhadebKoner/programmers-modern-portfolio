@@ -24,7 +24,7 @@ const Page = () => {
           Web Developer
         </p>
         <p className='text-sm sm:text-base md:text-lg max-w-lg mx-auto md:mx-0'>
-          I'am Buddhadeb Koner , a programmer who aims to produce and shere {" "}
+          I&apos;am Buddhadeb Koner , a programmer who aims to produce and shere {" "}
           <Link
             href="/works"
             className='link-color hover:link-hover ml-1 whitespace-nowrap'
@@ -46,8 +46,8 @@ const Page = () => {
           <Link href="/skill" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
             - [SKILLS ↗]
           </Link>
-          <Link href="/showcase" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            - [SHOWCASE ↗]
+          <Link href="/story" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
+            - [STORY ↗]
           </Link>
         </div>
       </div>
