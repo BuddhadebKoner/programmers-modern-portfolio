@@ -1,20 +1,17 @@
-import Image from 'next/image'
+import HeroImage from '@/components/HeroImage'
 import Link from 'next/link'
 import React from 'react'
 
 const Page = () => {
+
+
   return (
     <main className="min-h-screen px-4 py-12 sm:py-16 md:py-24 bg-background text-main-text flex flex-col justify-center items-center gap-6 md:flex-row md:gap-12 lg:gap-16">
-      <div className='w-full md:w-1/2 flex justify-center'>
-        <div className='relative w-full max-w-md h-64 sm:h-80 md:h-96'>
-          <Image
-            src="/herologo.svg"
-            alt="Hero"
-            fill
-            priority
-            className="object-contain"
-          />
-        </div>
+      <div className='w-full md:w-1/2 flex flex-col justify-start items-center gap-5'>
+        <h1 className='text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-primary text-start'>
+          Allways Out Of The Box !
+        </h1>
+        <HeroImage />
       </div>
       <div className='w-full md:w-1/2 flex flex-col gap-4 text-center md:text-left'>
         <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-highlight'>
@@ -27,7 +24,7 @@ const Page = () => {
           Web Developer
         </p>
         <p className='text-sm sm:text-base md:text-lg max-w-lg mx-auto md:mx-0'>
-          I'm IroncladDev, a Texas-based programmer who aims to produce and share{" "}
+          I'am Buddhadeb Koner , a programmer who aims to produce and shere {" "}
           <Link
             href="/works"
             className='link-color hover:link-hover ml-1 whitespace-nowrap'
@@ -37,20 +34,20 @@ const Page = () => {
           {" "}with the world
         </p>
         <div className="flex flex-col justify-center  items-baseline space-x-4">
-          <Link href="/story" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            [STORY ↗]
+          <Link href="/about" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
+            - [ABOUT ↗]
           </Link>
           <Link href="/works" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            [WORKS ↗]
+            - [WORKS ↗]
           </Link>
           <Link href="/contact" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            [CONTSCT ↗]
+            - [CONTSCT ↗]
           </Link>
           <Link href="/skill" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            [SKILLS ↗]
+            - [SKILLS ↗]
           </Link>
           <Link href="/showcase" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            [SHOWCASE ↗]
+            - [SHOWCASE ↗]
           </Link>
         </div>
       </div>
