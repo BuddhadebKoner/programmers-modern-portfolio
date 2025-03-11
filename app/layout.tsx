@@ -59,7 +59,7 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         {/* google ranking */}
-        <meta name="google-site-verification" content="tIuTbVILH-G_9w4nWpFt1f6Ic9oaKmSLhbReePTbMCA" />
+        <meta name="google-site-verification" content="55zJtHeFQ68sUblI7igi0GyLwHNe4U3Nxi_PrIqsBLg" />
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
