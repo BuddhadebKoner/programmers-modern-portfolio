@@ -1,9 +1,9 @@
 "use client";
 
 import { MoveLeft, MoveRight } from 'lucide-react';
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useState } from 'react'
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState } from 'react';
 
 interface CardProps {
    title: string;
@@ -26,7 +26,7 @@ const Card = ({ title, description, demoUrl, sourceCodeUrl, images, tags }: Card
    };
 
    return (
-      <div className="mb-6 sm:mb-8 rounded-lg overflow-hidden transition-all duration-300 border border-theme">
+      <article className="mb-6 sm:mb-8 rounded-lg overflow-hidden transition-all duration-300 border border-theme">
          {/* Project title and links */}
          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 border-b border-theme gap-2">
             {demoUrl && (
@@ -35,6 +35,7 @@ const Card = ({ title, description, demoUrl, sourceCodeUrl, images, tags }: Card
                   className="px-2 sm:px-3 py-1.5 sm:py-2 rounded-md text-base sm:text-lg md:text-xl font-medium link-color hover:link-hover"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title={`View demo of ${title}`}
                >
                   [{title} ↗]
                </Link>
@@ -46,6 +47,7 @@ const Card = ({ title, description, demoUrl, sourceCodeUrl, images, tags }: Card
                      className="px-2 sm:px-3 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium link-color hover:link-hover"
                      target="_blank"
                      rel="noopener noreferrer"
+                     title={`View source code of ${title}`}
                   >
                      [Source Code ↗]
                   </Link>
@@ -119,8 +121,8 @@ const Card = ({ title, description, demoUrl, sourceCodeUrl, images, tags }: Card
                </div>
             )}
          </div>
-      </div>
-   )
-}
+      </article>
+   );
+};
 
-export default Card
+export default Card;

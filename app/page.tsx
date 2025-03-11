@@ -1,15 +1,19 @@
-import HeroImage from '@/components/HeroImage'
-import Link from 'next/link'
-import React from 'react'
+import HeroImage from '@/components/HeroImage';
+import Link from 'next/link';
+import React from 'react';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home - Buddhadeb Koner | FullStack Web Developer",
+  description: "Welcome to the personal portfolio of Buddhadeb Koner, a creative FullStack Web Developer producing great software.",
+};
 
 const Page = () => {
-
-
   return (
     <main className="min-h-screen px-4 py-12 sm:py-16 md:py-24 bg-background text-main-text flex flex-col justify-center items-center gap-6 md:flex-row md:gap-12 lg:gap-16">
       <div className='w-full md:w-1/2 flex flex-col justify-start items-center gap-5'>
         <h1 className='text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-primary text-start'>
-          Allways Out Of The Box !
+          Always Out Of The Box!
         </h1>
         <HeroImage />
       </div>
@@ -24,16 +28,16 @@ const Page = () => {
           Web Developer
         </p>
         <p className='text-sm sm:text-base md:text-lg max-w-lg mx-auto md:mx-0'>
-          I&apos;am Buddhadeb Koner , a programmer who aims to produce and shere {" "}
+          I&apos;m Buddhadeb Koner, a programmer who aims to produce and share{" "}
           <Link
             href="/works"
             className='link-color hover:link-hover ml-1 whitespace-nowrap'
           >
             [great software ↗]
-          </Link>
-          {" "}with the world
+          </Link>{" "}
+          with the world.
         </p>
-        <div className="flex flex-col justify-center  items-baseline space-x-4">
+        <div className="flex flex-col justify-center items-baseline space-x-4">
           <Link href="/about" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
             - [ABOUT ↗]
           </Link>
@@ -41,7 +45,7 @@ const Page = () => {
             - [WORKS ↗]
           </Link>
           <Link href="/contact" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            - [CONTSCT ↗]
+            - [CONTACT ↗]
           </Link>
           <Link href="/skill" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
             - [SKILLS ↗]
@@ -52,7 +56,7 @@ const Page = () => {
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

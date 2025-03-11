@@ -1,41 +1,75 @@
-import React from 'react'
+import React from 'react';
 import MediaCard from "@/components/MediaCard";
+import type { Metadata } from "next";
 
-// Social media contact data
-const socialMedias = [
-   {
-      title: "Twitter",
-      username: "@buddhadeb",
-      url: "https://twitter.com/yourusername",
-      description: "X is where I post my thoughts, memes, takes, and whatever else comes to mind"
+export const metadata: Metadata = {
+   title: "Contact - Get in Touch | Buddhadeb Koner",
+   description:
+      "Connect with Buddhadeb Koner on Twitter, GitHub, LinkedIn, Instagram, or via email. My DMs are always open for collaboration or a friendly hello.",
+   openGraph: {
+      title: "Contact - Get in Touch | Buddhadeb Koner",
+      description:
+         "Connect with Buddhadeb Koner on Twitter, GitHub, LinkedIn, Instagram, or via email. My DMs are always open for collaboration or a friendly hello.",
+      url: "https://buddhadebkoner.vercel.app/contact", 
+      siteName: "Buddhadeb Koner",
+      images: [
+         {
+            url: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285471/next-portfolio/otl2olxxc36kfsbidj7d.png", 
+            width: 1200,
+            height: 630,
+            alt: "Contact Buddhadeb Koner",
+         },
+      ],
+      locale: "en_US",
+      type: "website",
    },
-   {
-      title: "GitHub",
-      username: "@buddhadeb",
-      url: "https://github.com/yourusername",
-      description: "Check out my code repositories and open-source contributions"
+   twitter: {
+      card: "summary_large_image",
+      title: "Contact - Get in Touch | Buddhadeb Koner",
+      description:
+         "Connect with Buddhadeb Koner on Twitter, GitHub, LinkedIn, Instagram, or via email. My DMs are always open for collaboration or a friendly hello.",
+      images: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285471/next-portfolio/otl2olxxc36kfsbidj7d.png", 
    },
-   {
-      title: "LinkedIn",
-      username: "Buddhadeb Koner",
-      url: "https://linkedin.com/in/yourusername",
-      description: "Connect with me professionally for work opportunities and collaboration"
+   alternates: {
+      canonical: "https://buddhadebkoner.vercel.app/contact", 
    },
-   {
-      title: "Instagram",
-      username: "Buddhadeb Koner",
-      url: "https://linkedin.com/in/yourusername",
-      description: "Connect with me professionally for work opportunities and collaboration"
-   },
-   {
-      title: "Email",
-      username: "buddhadeb@example.com",
-      url: "mailto:buddhadeb@example.com",
-      description: "The most direct way to reach me for business inquiries and collaborations"
-   }
-];
+};
 
 const page = () => {
+   // Social media contact data
+   const socialMedias = [
+      {
+         title: "Twitter",
+         username: "@buddhadeb",
+         url: "https://twitter.com/yourusername",
+         description: "X is where I post my thoughts, memes, takes, and whatever else comes to mind"
+      },
+      {
+         title: "GitHub",
+         username: "@buddhadeb",
+         url: "https://github.com/yourusername",
+         description: "Check out my code repositories and open-source contributions"
+      },
+      {
+         title: "LinkedIn",
+         username: "Buddhadeb Koner",
+         url: "https://linkedin.com/in/yourusername",
+         description: "Connect with me professionally for work opportunities and collaboration"
+      },
+      {
+         title: "Instagram",
+         username: "Buddhadeb Koner",
+         url: "https://linkedin.com/in/yourusername",
+         description: "Connect with me professionally for work opportunities and collaboration"
+      },
+      {
+         title: "Email",
+         username: "buddhadeb@example.com",
+         url: "mailto:buddhadeb@example.com",
+         description: "The most direct way to reach me for business inquiries and collaborations"
+      }
+   ];
+
    return (
       <main className="min-h-screen bg-background text-primary py-16">
          <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8 md:gap-10">
@@ -48,7 +82,7 @@ const page = () => {
                </p>
             </section>
 
-            <section className='animate-fadeIn flex flex-col gap-5 sm:gap-8'>
+            <section className="animate-fadeIn flex flex-col gap-5 sm:gap-8">
                {socialMedias.map((socialMedia, index) => (
                   <MediaCard
                      key={index}
@@ -61,7 +95,7 @@ const page = () => {
             </section>
          </div>
       </main>
-   )
-}
+   );
+};
 
-export default page
+export default page;

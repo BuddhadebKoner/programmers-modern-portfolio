@@ -1,4 +1,38 @@
-import React from 'react'
+import React from 'react';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+   title: "Story - My Journey | Buddhadeb Koner | FullStack Web Developer",
+   description:
+      "Explore the journey of Buddhadeb Koner from the early days of web development to advanced cloud certification and open source contributions. Discover the timeline of milestones and projects that define the career.",
+   openGraph: {
+      title: "Story - My Journey | Buddhadeb Koner | FullStack Web Developer",
+      description:
+         "Explore the journey of Buddhadeb Koner from the early days of web development to advanced cloud certification and open source contributions. Discover the timeline of milestones and projects that define the career.",
+      url: "https://buddhadebkoner.vercel.app/story",
+      siteName: "Buddhadeb Koner",
+      images: [
+         {
+            url: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285452/next-portfolio/ntuasgjzwygk9ntvwlgi.png",
+            width: 1200,
+            height: 630,
+            alt: "Timeline of Buddhadeb Koner",
+         },
+      ],
+      locale: "en_US",
+      type: "website",
+   },
+   twitter: {
+      card: "summary_large_image",
+      title: "Story - My Journey | Buddhadeb Koner | FullStack Web Developer",
+      description:
+         "Explore the journey of Buddhadeb Koner from the early days of web development to advanced cloud certification and open source contributions.",
+      images: ["https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285452/next-portfolio/ntuasgjzwygk9ntvwlgi.png"],
+   },
+   alternates: {
+      canonical: "https://buddhadebkoner.vercel.app/story",
+   },
+};
 
 const page = () => {
    const timelineEvents = [
@@ -6,86 +40,120 @@ const page = () => {
          year: 2022,
          events: [
             {
-               title: "Started Learning Web Development",
+               title: "First Steps in Coding",
                date: "March 15, 2022",
-               description: "Began my journey with HTML, CSS, and JavaScript fundamentals. Created my first static websites and learned responsive design principles.",
+               description:
+                  "Purchased my first laptop and began my coding journey by learning HTML, CSS, and JavaScript. I started building simple user interfaces and small websites to establish a solid foundation.",
                color: "accent-green-light",
-               link: "https://example.com/first-website"
+               link: ""
             },
             {
-               title: "First Frontend Framework",
-               date: "August 22, 2022",
-               description: "Discovered React.js and built several small projects to understand component-based architecture. Deployed my first portfolio site.",
-               color: "accent-green",
-               link: "https://example.com/portfolio"
+               title: "College Semester – C Programming",
+               date: "May 2022",
+               description:
+                  "Completed my first college semester, where I mastered C programming. This experience provided the critical programming fundamentals that paved the way for future learning.",
+               color: "accent-green-light",
+               link: ""
             },
+            {
+               title: "Exploring Python and React",
+               date: "August 2022",
+               description:
+                  "Ventured into Python to broaden my programming skills and began exploring React for dynamic web interfaces. This phase marked the transition from basic web development to more interactive applications.",
+               color: "accent-green-light",
+               link: ""
+            }
          ]
       },
       {
          year: 2023,
          events: [
             {
-               title: "Backend Development",
-               date: "January 10, 2023",
-               description: "Expanded my skills with Node.js and Express. Created RESTful APIs and connected them to MongoDB databases.",
+               title: "Advanced Web Development",
+               date: "February 2023",
+               description:
+                  "Progressed into building more complex websites, delving into database management, and initiating backend development. This period was characterized by a deeper understanding of full-stack technologies.",
                color: "accent-yellow",
-               link: "https://github.com/yourusername/api-project"
+               link: ""
             },
             {
-               title: "First Freelance Project",
-               date: "May 5, 2023",
-               description: "Completed a website for a local business, implementing responsive design, contact forms, and custom animations.",
+               title: "MERN Blog Launch",
+               date: "June 2023",
+               description:
+                  "Developed the MERN Blog project featuring a custom admin panel and integration with MongoDB for dynamic content management.",
                color: "accent-yellow",
-               link: "https://client-project.com"
+               link: "https://github.com/BuddhadebKoner/Blog-App/"
             },
             {
-               title: "TypeScript & Next.js",
-               date: "October 18, 2023",
-               description: "Learned TypeScript to improve code quality. Started using Next.js for SEO-friendly React applications with server-side rendering.",
+               title: "Modern Portfolio Developers",
+               date: "August 2023",
+               description:
+                  "Created a sleek, modern portfolio website tailored for developers using Next.js, Tailwind CSS, and TypeScript. The project emphasizes simplicity and elegance.",
                color: "accent-yellow",
-               link: "https://github.com/yourusername/nextjs-project"
+               link: "https://buddhadebkoner.vercel.app/"
             },
+            {
+               title: "Next Portfolio Launch",
+               date: "October 2023",
+               description:
+                  "Released a personal portfolio site that showcases my skills, projects, and blog posts. This project includes a dark mode toggle and dynamically fetched content from the DEV Community API.",
+               color: "accent-yellow",
+               link: "https://next-portfolio-buddhadeb.vercel.app/"
+            }
          ]
       },
       {
          year: 2024,
          events: [
             {
-               title: "Full-Stack Application",
-               date: "February 7, 2024",
-               description: "Built and deployed a complete SaaS application with user authentication, payment processing, and dashboard analytics.",
+               title: "Expanding into Advanced Backend",
+               date: "January 2024",
+               description:
+                  "Focused on advancing my backend skills, exploring complex database management, and integrating robust server-side technologies.",
                color: "accent-orange",
-               link: "https://my-saas-app.com"
+               link: ""
             },
             {
-               title: "Contributing to Open Source",
-               date: "July 22, 2024",
-               description: "Started contributing to open-source projects on GitHub. Had my first pull request merged into a popular library.",
+               title: "Kochugram Social Media Platform",
+               date: "May 2024",
+               description:
+                  "Launched Kochugram, a social media platform designed for the Koch community. Built with Next.js, Tailwind CSS, and TypeScript, it leverages Appwrite for backend operations.",
                color: "accent-orange",
-               link: "https://github.com/popular-lib/pull/123"
+               link: "https://kochugram-com.vercel.app/"
             },
+            {
+               title: "Chat AI Project",
+               date: "August 2024",
+               description:
+                  "Developed an intelligent chatbot using the OpenAI API. This project features a clean user interface that delivers dynamic, real-time responses.",
+               color: "accent-orange",
+               link: "https://github.com/BuddhadebKoner/ChatAi/"
+            },
+            {
+               title: "React Native Todo App",
+               date: "November 2024",
+               description:
+                  "Created a simple yet effective React Native ToDo app with Expo, designed for learning and storing tasks locally on the device.",
+               color: "accent-orange",
+               link: "https://github.com/BuddhadebKoner/Todo-Mobile-App/"
+            }
          ]
       },
       {
          year: 2025,
          events: [
             {
-               title: "Advanced React Patterns",
-               date: "January 14, 2025",
-               description: "Mastered advanced React concepts including custom hooks, context API, and performance optimization techniques.",
+               title: "Mastering Next.js Full-Stack Development",
+               date: "March 2025",
+               description:
+                  "Continuing my journey in full-stack development, I am now focused on refining my skills in Next.js and building robust, scalable web applications.",
                color: "accent-red",
-               link: "https://github.com/yourusername/react-patterns"
-            },
-            {
-               title: "Cloud Certification",
-               date: "March 10, 2025",
-               description: "Obtained AWS Developer certification. Implemented serverless architectures and CI/CD pipelines for projects.",
-               color: "accent-red",
-               link: "https://aws.amazon.com/certification/certified-developer-associate/"
-            },
+               link: ""
+            }
          ]
-      },
+      }
    ];
+
 
    const getDayOfWeek = (dateString: string) => {
       const date = new Date(dateString);
@@ -206,4 +274,4 @@ const page = () => {
    )
 }
 
-export default page
+export default page;

@@ -3,7 +3,7 @@
 import { Monitor, Moon, Sun } from 'lucide-react';
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { useTheme } from './ThemeProvider';
+import { useTheme } from '../context/ThemeProvider';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -26,6 +26,28 @@ const Navbar = () => {
     toggleTheme(selectedTheme);
     setIsDropdownOpen(false); // Close dropdown after selection
   };
+
+  // toggle using up and down arrow keys and enter theme selection
+  // const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+  //   if (e.key === "ArrowDown") {
+  //     e.preventDefault();
+  //     if (e.currentTarget.nextElementSibling) {
+  //       (e.currentTarget.nextElementSibling as HTMLElement).focus();
+  //     }
+  //   }
+
+  //   if (e.key === "ArrowUp") {
+  //     e.preventDefault();
+  //     if (e.currentTarget.previousElementSibling) {
+  //       (e.currentTarget.previousElementSibling as HTMLElement).focus();
+  //     }
+  //   }
+
+  //   if (e.key === "Enter") {
+  //     e.preventDefault();
+  //     e.currentTarget.click();
+  //   }
+  // };
 
   return (
     <nav className="fixed w-full z-100 bg-background">
