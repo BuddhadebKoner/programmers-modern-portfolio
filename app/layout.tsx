@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/context/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react"
 
 import Head from "next/head";
 
@@ -24,11 +25,11 @@ export const metadata: Metadata = {
     title: "Buddhadeb Koner | FullStack Web Developer",
     description:
       "Discover the personal portfolio of Buddhadeb Koner – a creative FullStack Web Developer producing great software.",
-    url: "https://buddhadebkoner.vercel.app/", 
+    url: "https://buddhadebkoner.vercel.app/",
     siteName: "Buddhadeb Koner",
     images: [
       {
-        url: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285469/next-portfolio/xyxj8fdggwypdx2bwdnp.png", 
+        url: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285469/next-portfolio/xyxj8fdggwypdx2bwdnp.png",
         width: 1200,
         height: 630,
         alt: "Buddhadeb Koner",
@@ -42,10 +43,10 @@ export const metadata: Metadata = {
     title: "Buddhadeb Koner | FullStack Web Developer",
     description:
       "Discover the personal portfolio of Buddhadeb Koner – a creative FullStack Web Developer producing great software.",
-    images: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285469/next-portfolio/xyxj8fdggwypdx2bwdnp.png", 
+    images: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285469/next-portfolio/xyxj8fdggwypdx2bwdnp.png",
   },
   alternates: {
-    canonical: "https://buddhadebkoner.vercel.app/", 
+    canonical: "https://buddhadebkoner.vercel.app/",
   },
 };
 
@@ -84,6 +85,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           <section className="z-10">{children}</section>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
