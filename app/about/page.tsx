@@ -132,11 +132,11 @@ const AboutPage = () => {
                         <span className="text-sm sm:text-base font-medium text-highlight-secondary">Written Docs:</span>
                         <span className="text-sm sm:text-base text-secondary ml-2">Markdown</span>
                      </div>
-                     <div className="flex items-center">
+                     <div className="flex items-center mb-2">
                         <span className="text-sm sm:text-base font-medium text-highlight-secondary">Programming:</span>
                         <span className="text-sm sm:text-base text-secondary ml-2">JavaScript / TypeScript</span>
                      </div>
-                     <div className="flex items-center">
+                     <div className="flex items-center mb-2">
                         <span className="text-sm sm:text-base font-medium text-highlight-secondary">Extra Programming:</span>
                         <span className="text-sm sm:text-base text-secondary ml-2">C++ / Java</span>
                      </div>
@@ -218,7 +218,7 @@ const AboutPage = () => {
 
                   </div>
                   <div className="flex items-center p-3 rounded-lg bg-background-secondary border border-theme">
-                     <span className="text-sm sm:text-base">Operating System:</span>
+                     <span className="text-sm sm:text-base">OS:</span>
                      <span className="text-sm sm:text-base text-secondary ml-2">Ubuntu 24.04.2 LTS</span>
                      <Link
                         target='_blank'

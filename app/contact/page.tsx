@@ -40,31 +40,31 @@ const page = () => {
    const socialMedias = [
       {
          title: "Twitter",
-         username: "@buddhadeb",
-         url: "https://twitter.com/yourusername",
+         username: "@buddhadeb_koner",
+         url: "https://x.com/buddhadeb_koner/",
          description: "X is where I post my thoughts, memes, takes, and whatever else comes to mind"
       },
       {
          title: "GitHub",
-         username: "@buddhadeb",
-         url: "https://github.com/yourusername",
+         username: "@BuddhadebKoner",
+         url: "https://github.com/BuddhadebKoner/",
          description: "Check out my code repositories and open-source contributions"
       },
       {
          title: "LinkedIn",
-         username: "Buddhadeb Koner",
-         url: "https://linkedin.com/in/yourusername",
+         username: "@Buddhadeb Koner",
+         url: "https://www.linkedin.com/in/buddhadeb-koner/",
          description: "Connect with me professionally for work opportunities and collaboration"
       },
       {
          title: "Instagram",
-         username: "Buddhadeb Koner",
-         url: "https://linkedin.com/in/yourusername",
+         username: "@buddhadeb_koner",
+         url: "https://www.instagram.com/buddhadeb_koner/",
          description: "Connect with me professionally for work opportunities and collaboration"
       },
       {
          title: "Email",
-         username: "buddhadeb@example.com",
+         username: "iambuddhadebkoner@gmail.com",
          url: "mailto:buddhadeb@example.com",
          description: "The most direct way to reach me for business inquiries and collaborations"
       }
