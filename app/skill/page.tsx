@@ -1,6 +1,7 @@
 import React from 'react';
 import SkillCategory from "@/components/SkillCategory";
 import type { Metadata } from "next";
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "Skills - Buddhadeb Koner | FullStack Web Developer",
@@ -51,18 +52,30 @@ const page = () => {
           description: "Styling language for crafting visually appealing web pages."
         },
         {
-          name: "JavaScript (ES6+)",
-          description: "Core programming language for creating dynamic web experiences."
-        }
+          name: "Tailwind CSS",
+          description: "Utility-first CSS framework enabling rapid and responsive UI development."
+        },
+        {
+          name: "Git",
+          description: "Version control system for tracking changes in code and collaborating with others."
+        },
+        {
+          name: "Figma",
+          description: "Design tool for creating high-fidelity prototypes and mockups."
+        },
+        {
+          name: "Blog Writing",
+          description: "Experience in writing technical articles and blog posts on web development."
+        },
       ]
     },
     {
-      title: "B - Good",
+      title: "B - Mid",
       color: "bg-accent-green",
       skills: [
         {
-          name: "C Programming",
-          description: "Foundational language learned during college, crucial for understanding programming concepts."
+          name: "JavaScript (ES6+)",
+          description: "Core programming language for creating dynamic web experiences."
         },
         {
           name: "C++",
@@ -75,25 +88,37 @@ const page = () => {
         {
           name: "Python",
           description: "Versatile scripting language for automation, data handling, and quick prototyping."
-        }
+        },
+        {
+          name: "DSA",
+          description: "Understanding of fundamental data structures and algorithms for efficient problem-solving."
+        },
+        {
+          name: "Linux",
+          description: "Experience with Linux-based operating systems and command-line tools."
+        },
       ]
     },
     {
-      title: "C - Mid",
+      title: "C - Good",
       color: "bg-accent-yellow",
       skills: [
         {
+          name: "Next.js",
+          description: "Powerful framework for server-rendered React applications and full-stack development."
+        },
+        {
+          name: "Express.js",
+          description: "Minimalist web framework for Node.js that simplifies API development."
+        },
+        {
+          name: "MongoDB",
+          description: "NoSQL database integral to the MERN stack for handling dynamic data."
+        },
+        {
           name: "UI/UX Design",
-          description: "Fundamental principles of designing user-friendly and intuitive interfaces."
+          description: "Knowledge of design principles and tools to create intuitive user interfaces."
         },
-        {
-          name: "Responsive Web Design",
-          description: "Techniques to build adaptive layouts for various devices and screen sizes."
-        },
-        {
-          name: "Small Website Development",
-          description: "Experience in creating basic websites to experiment and learn new concepts."
-        }
       ]
     },
     {
@@ -115,24 +140,8 @@ const page = () => {
           description: "Modern component-based library for building interactive user interfaces."
         },
         {
-          name: "Next.js",
-          description: "Powerful framework for server-rendered React applications and full-stack development."
-        },
-        {
           name: "Node.js",
           description: "Efficient JavaScript runtime for building scalable backend services."
-        },
-        {
-          name: "Express.js",
-          description: "Minimalist web framework for Node.js that simplifies API development."
-        },
-        {
-          name: "MongoDB",
-          description: "NoSQL database integral to the MERN stack for handling dynamic data."
-        },
-        {
-          name: "Tailwind CSS",
-          description: "Utility-first CSS framework enabling rapid and responsive UI development."
         },
       ]
     }
@@ -148,7 +157,7 @@ const page = () => {
               # My skills
             </h1>
             <p className="text-xs sm:text-sm md:text-base text-primary pl-4 mb-8">
-              I have a strong foundation in web development and I am always learning new technologies to improve my skills. I am proficient in the following technologies:
+              Here are the skills and technologies I&apos;ve mastered over the years as a FullStack Web Developer. I&apos;m always learning and exploring new tools to enhance my development workflow and create better user experiences. see my works on<Link href="/works" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">[Work ↗]</Link>page.
             </p>
           </section>
 

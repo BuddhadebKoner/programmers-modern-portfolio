@@ -43,8 +43,8 @@ const AboutPage = () => {
                <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-highlight mb-3">
                   # Documentation
                </h1>
-               <p className="text-sm sm:text-base text-primary md:max-w-2xl">
-                  I am a passionate web developer with expertise in building modern, high-performance web applications. I continuously explore new technologies and frameworks to deliver innovative solutions.
+               <p className="text-sm sm:text-base text-primary">
+                  I am passionate web developer with expertise in building modern, high-performance web applications. I continuously explore new technologies and frameworks to deliver innovative solutions. check my <Link href="/blogs" className="text-sm font-medium link-color hover:link-hover whitespace-nowrap">[blogs ↗]</Link>.
                </p>
             </section>
 
@@ -52,8 +52,8 @@ const AboutPage = () => {
                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-highlight mb-3">
                   ## Who am I
                </h2>
-               <p className="text-sm sm:text-base text-primary md:max-w-2xl">
-                  I am a Buddhadeb Koner from India. I am a dedicated web developer specializing in Next.js and the MERN/Node environment. I have a strong passion for web development and love to create modern, high-performance web applications. I am a quick learner and always eager to learn new technologies and frameworks to deliver innovative solutions.
+               <p className="text-sm sm:text-base text-primary">
+                  I am Buddhadeb Koner, a FullStack Web Developer with a passion for creating and sharing great software. I specialize in the MERN stack and Next.js, and I am always eager to learn new technologies and frameworks. I am a dedicated problem solver who enjoys contributing to open-source projects and building innovative web applications.
                </p>
             </section>
 

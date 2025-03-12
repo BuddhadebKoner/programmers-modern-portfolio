@@ -31,6 +31,12 @@
   --foreground: #242336;
   --accent-alpha: rgba(175, 199, 114, 0.1);
   /* #afc772 with 10% opacity */
+
+  /* Glassmorphism variables - dark theme */
+  --glass-background: rgba(20, 19, 30, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --glass-blur: 8px;
 }
 
 /* Light theme overrides */
@@ -63,6 +69,12 @@
   --foreground: #ffffff;
   --accent-alpha: rgba(124, 149, 55, 0.1);
   /* #7c9537 with 10% opacity */
+
+  /* Glassmorphism variables - light theme */
+  --glass-background: rgba(245, 245, 250, 0.75);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+  --glass-blur: 8px;
 }
 
 /* Utility classes based on theme variables */
@@ -159,6 +171,22 @@
 
 .hover\:link-hover:hover {
   color: var(--link-hover);
+}
+
+/* Glassmorphism utilities */
+.bg-glass {
+  background-color: var(--glass-background);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.dropdown-glass {
+  background-color: var(--glass-background);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
 }
 
 body {

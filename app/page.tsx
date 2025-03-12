@@ -39,19 +39,19 @@ const Page = () => {
         </p>
         <div className="flex flex-col justify-center items-baseline space-x-4">
           <Link href="/about" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            - [ABOUT ↗]
+            - [Know About me ↗]
           </Link>
           <Link href="/works" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            - [WORKS ↗]
+            - [Showcase ↗]
           </Link>
           <Link href="/contact" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            - [CONTACT ↗]
+            - [Get in touch ↗]
           </Link>
           <Link href="/skill" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            - [SKILLS ↗]
+            - [What i know ! ↗]
           </Link>
           <Link href="/story" className="px-3 py-2 rounded-md text-sm font-medium link-color hover:link-hover">
-            - [STORY ↗]
+            - [Know my story ↗]
           </Link>
         </div>
       </div>

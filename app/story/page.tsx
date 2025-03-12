@@ -182,7 +182,7 @@ const page = () => {
          'accent-orange': 'bg-orange-500',
          'accent-red': 'bg-rose-500'
       };
-      return colorMap[colorName] || 'bg-blue-500'; // fallback color
+      return colorMap[colorName] || 'bg-blue-500';
    };
 
    return (
@@ -193,7 +193,7 @@ const page = () => {
                   <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-highlight mb-1.5 sm:mb-2 md:mb-3 pl-2 sm:pl-3 py-1">
                      # My Journey
                   </h1>
-                  <p className="text-xs sm:text-sm md:text-base text-primary pl-3 sm:pl-4 mb-6 sm:mb-8">
+                  <p className="text-xs sm:text-sm md:text-base text-primary pl-3 sm:pl-4">
                      Follow the path of my development career from 2022 to present
                   </p>
                </section>

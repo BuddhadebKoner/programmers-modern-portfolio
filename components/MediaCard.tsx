@@ -27,7 +27,7 @@ const MediaCard = ({ title, username, url, description }: MediaCardProps) => {
                </div>
             </div>
          </div>
-         <div className="p-4 sm:p-5 bg-background-secondary">
+         <div className="p-2 sm:p-2 bg-background-secondary">
             <p className="text-xs sm:text-sm md:text-base text-primary leading-relaxed">{description}</p>
          </div>
          <div className="absolute inset-0 border border-highlight opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none rounded-lg"></div>

@@ -1,5 +1,7 @@
 import Card from "@/components/Card";
+import TimelineNavigation from "@/components/TimelineNavigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 // Sample projects data
 const projects = [
@@ -87,8 +89,8 @@ const projects = [
       ],
       tags: ["React Native", "Javascript", "Expo"],
    },
+   
 ];
-
 
 export const metadata: Metadata = {
    title: "Works - Showcase | Buddhadeb Koner | FullStack Web Developer",
@@ -128,24 +130,28 @@ const Page = () => {
                <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-highlight mb-3">
                   # Showcase
                </h1>
-               <p className="text-sm sm:text-base text-primary md:max-w-2xl">
-                  All the presentable projects I&apos;ve made throughout the years.
+               <p className="text-sm sm:text-base text-primary">
+                  Explore the showcase of projects by Buddhadeb Koner, featuring modern web applications built with Next.js, Tailwind CSS, and TypeScript. Most project source codes are available on <Link href="https://github.com/BuddhadebKoner" target="_blank" className="link-color hover:link-hover whitespace-nowrap">[GitHub ↗]</Link>. See my skills on <Link href="/skill" className="text-sm font-medium link-color hover:link-hover whitespace-nowrap">[Skill ↗]</Link>. Feel free to contact me, my DMs are always open <Link href="/contact" className="text-sm font-medium link-color hover:link-hover whitespace-nowrap">[Contact ↗]</Link>.
                </p>
             </section>
             <section className="animate-fadeIn flex flex-col gap-8">
                {projects.map((project, index) => (
-                  <Card
-                     key={index}
-                     title={project.title}
-                     description={project.description}
-                     demoUrl={project.demoUrl}
-                     sourceCodeUrl={project.sourceCodeUrl}
-                     images={project.images}
-                     tags={project.tags}
-                  />
+                  <div key={index} data-project-id={index} id={`project-${index}`}>
+                     <Card
+                        title={project.title}
+                        description={project.description}
+                        demoUrl={project.demoUrl}
+                        sourceCodeUrl={project.sourceCodeUrl}
+                        images={project.images}
+                        tags={project.tags}
+                     />
+                  </div>
                ))}
             </section>
          </div>
+
+         {/* Simple Timeline Navigation Component */}
+         <TimelineNavigation projects={projects} />
       </main>
    );
 };

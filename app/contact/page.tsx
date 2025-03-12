@@ -1,5 +1,6 @@
 import React from 'react';
 import MediaCard from "@/components/MediaCard";
+import ContactForm from "@/components/ContactForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,11 +11,11 @@ export const metadata: Metadata = {
       title: "Contact - Get in Touch | Buddhadeb Koner",
       description:
          "Connect with Buddhadeb Koner on Twitter, GitHub, LinkedIn, Instagram, or via email. My DMs are always open for collaboration or a friendly hello.",
-      url: "https://buddhadebkoner.vercel.app/contact", 
+      url: "https://buddhadebkoner.vercel.app/contact",
       siteName: "Buddhadeb Koner",
       images: [
          {
-            url: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285471/next-portfolio/otl2olxxc36kfsbidj7d.png", 
+            url: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285471/next-portfolio/otl2olxxc36kfsbidj7d.png",
             width: 1200,
             height: 630,
             alt: "Contact Buddhadeb Koner",
@@ -28,10 +29,10 @@ export const metadata: Metadata = {
       title: "Contact - Get in Touch | Buddhadeb Koner",
       description:
          "Connect with Buddhadeb Koner on Twitter, GitHub, LinkedIn, Instagram, or via email. My DMs are always open for collaboration or a friendly hello.",
-      images: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285471/next-portfolio/otl2olxxc36kfsbidj7d.png", 
+      images: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285471/next-portfolio/otl2olxxc36kfsbidj7d.png",
    },
    alternates: {
-      canonical: "https://buddhadebkoner.vercel.app/contact", 
+      canonical: "https://buddhadebkoner.vercel.app/contact",
    },
 };
 
@@ -82,7 +83,7 @@ const page = () => {
                </p>
             </section>
 
-            <section className="animate-fadeIn flex flex-col gap-5 sm:gap-8">
+            <section className="animate-fadeIn flex flex-col gap-2">
                {socialMedias.map((socialMedia, index) => (
                   <MediaCard
                      key={index}
@@ -92,6 +93,17 @@ const page = () => {
                      description={socialMedia.description}
                   />
                ))}
+            </section>
+
+            {/* Contact Form Section */}
+            <section className="w-full animate-fadeIn border border-theme rounded-lg bg-background-secondary p-6">
+               <h2 className="text-lg sm:text-xl font-bold text-highlight mb-4 pl-2">
+                  Send a Direct Message
+               </h2>
+               <ContactForm />
+               <p className="text-secondary text-xs mt-4">
+                  I typically respond within 24-48 hours on weekdays.
+               </p>
             </section>
          </div>
       </main>
