@@ -58,6 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <meta name="google-site-verification" content="tIuTbVILH-G_9w4nWpFt1f6Ic9oaKmSLhbReePTbMCA" />
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
