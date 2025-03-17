@@ -48,7 +48,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://buddhadebkoner.vercel.app/",
   },
+  verification: {
+    google: "tIuTbVILH-G_9w4nWpFt1f6Ic9oaKmSLhbReePTbMCA",
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -58,7 +62,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <meta name="google-site-verification" content="tIuTbVILH-G_9w4nWpFt1f6Ic9oaKmSLhbReePTbMCA" />
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
