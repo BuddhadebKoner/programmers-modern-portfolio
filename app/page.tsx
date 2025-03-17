@@ -2,15 +2,16 @@ import HeroImage from '@/components/HeroImage';
 import Link from 'next/link';
 import React from 'react';
 import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Home - Buddhadeb Koner | FullStack Web Developer",
   description: "Welcome to the personal portfolio of Buddhadeb Koner, a creative FullStack Web Developer producing great software.",
 };
-
 const Page = () => {
   return (
-    <main className="min-h-screen px-4 py-12 sm:py-16 md:py-24 bg-background text-main-text flex flex-col justify-center items-center gap-6 md:flex-row md:gap-12 lg:gap-16">
+    <main className="min-h-screen px-4 py-12 sm:py-16 md:py-24 bg-background text-main-text flex flex-col justify-center items-center gap-6 md:flex-row md:gap-12 lg:gap-16 relative accent-dots">
+      {/* Add corner glow effect */}
+      <div className="corner-glow"></div>
+
       <div className='w-full md:w-1/2 flex flex-col justify-start items-center gap-5'>
         <h1 className='text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-primary text-start'>
           Always Out Of The Box!
@@ -58,5 +59,4 @@ const Page = () => {
     </main>
   );
 };
-
 export default Page;

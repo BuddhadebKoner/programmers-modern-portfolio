@@ -189,6 +189,79 @@
   box-shadow: 0 8px 32px 0 var(--glass-shadow);
 }
 
+/* Add these styles to your existing CSS file */
+
+/* Background pattern */
+.bg-background {
+  background-color: var(--background-primary);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Grid pattern overlay */
+.bg-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(to right, var(--border-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* Diagonal lines */
+.bg-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    repeating-linear-gradient(45deg, var(--highlight-primary) 0, var(--highlight-primary) 1px, transparent 1px, transparent 50px);
+  opacity: 0.03;
+  z-index: -1;
+}
+
+/* Add this class to create accent dots at intersections */
+.accent-dots {
+  position: relative;
+}
+
+.accent-dots::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--highlight-primary) 1px, transparent 2px);
+  background-size: 50px 50px;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* Soft glow in one corner */
+.corner-glow {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--accent-green-light) 0%, transparent 70%);
+  opacity: 0.15;
+  z-index: -2;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
 body {
   width: 100vw;
   height: 100vh;
