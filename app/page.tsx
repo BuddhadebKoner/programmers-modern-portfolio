@@ -8,9 +8,12 @@ export const metadata: Metadata = {
 };
 const Page = () => {
   return (
-    <main className="min-h-screen px-4 py-12 sm:py-16 md:py-24 bg-background text-main-text flex flex-col justify-center items-center gap-6 md:flex-row md:gap-12 lg:gap-16 relative accent-dots">
+    <main className="min-h-screen px-4 py-12 sm:py-16 md:py-24 bg-background text-main-text flex flex-col justify-center items-center gap-6 md:flex-row md:gap-12 lg:gap-16 accent-dots">
       {/* Add corner glow effect */}
       <div className="corner-glow"></div>
+
+      {/* Add constellation pattern */}
+      <div className="constellation"></div>
 
       <div className='w-full md:w-1/2 flex flex-col justify-start items-center gap-5'>
         <h1 className='text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-primary text-start'>
