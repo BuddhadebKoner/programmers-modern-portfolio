@@ -1,9 +1,15 @@
 "use client";
 
-import { MoveLeft, MoveRight } from 'lucide-react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 interface CardProps {
    title: string;
@@ -11,20 +17,11 @@ interface CardProps {
    demoUrl?: string;
    sourceCodeUrl?: string;
    images: string[];
+   imageAlt?: string[];
    tags?: string[];
 }
 
-const Card = ({ title, description, demoUrl, sourceCodeUrl, images, tags }: CardProps) => {
-   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-   const nextImage = () => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
-   };
-
-   const prevImage = () => {
-      setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-   };
-
+const Card = ({ title, description, demoUrl, sourceCodeUrl, images, imageAlt = [], tags }: CardProps) => {
    return (
       <article className="mb-6 sm:mb-8 rounded-lg overflow-hidden transition-all duration-300 border border-theme">
          {/* Project title and links */}
@@ -55,52 +52,35 @@ const Card = ({ title, description, demoUrl, sourceCodeUrl, images, tags }: Card
             </div>
          </div>
 
-         {/* Image gallery */}
+         {/* Image gallery with Swiper */}
          <div className="relative">
-            <div className="aspect-video relative">
-               <Image
-                  src={images[currentImageIndex]}
-                  alt={`${title} screenshot ${currentImageIndex + 1}`}
-                  fill
-                  className="object-cover"
-                  priority={currentImageIndex === 0}
-               />
-            </div>
-
-            {/* Navigation arrows - only show if multiple images */}
-            {images.length > 1 && (
-               <div className="absolute inset-0 flex justify-between items-center">
-                  <button
-                     onClick={prevImage}
-                     className="bg-black/50 hover:bg-black/70 text-white rounded-full p-1 sm:p-2 ml-1 sm:ml-2 transition-colors cursor-pointer"
-                     aria-label="Previous image"
-                  >
-                     <MoveLeft size={16} className="sm:w-5 sm:h-5" />
-                  </button>
-                  <button
-                     onClick={nextImage}
-                     className="bg-black/50 hover:bg-black/70 text-white rounded-full p-1 sm:p-2 mr-1 sm:mr-2 transition-colors cursor-pointer"
-                     aria-label="Next image"
-                  >
-                     <MoveRight size={16} className="sm:w-5 sm:h-5" />
-                  </button>
-               </div>
-            )}
-
-            {/* Image indicators */}
-            {images.length > 1 && (
-               <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1">
-                  {images.map((_, index) => (
-                     <button
-                        key={index}
-                        onClick={() => setCurrentImageIndex(index)}
-                        className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-colors ${index === currentImageIndex ? 'bg-white' : 'bg-white/50 hover:bg-white/80'
-                           }`}
-                        aria-label={`Go to image ${index + 1}`}
-                     />
-                  ))}
-               </div>
-            )}
+            <Swiper
+               modules={[Navigation, Pagination, A11y, Autoplay]}
+               spaceBetween={0}
+               slidesPerView={1}
+               navigation
+               pagination={{ clickable: true }}
+               loop={true}
+               autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+               }}
+               className="aspect-video"
+            >
+               {images.map((image, index) => (
+                  <SwiperSlide key={index}>
+                     <div className="aspect-video relative">
+                        <Image
+                           src={image}
+                           alt={imageAlt[index]}
+                           fill
+                           className="object-cover"
+                           priority={index === 0}
+                        />
+                     </div>
+                  </SwiperSlide>
+               ))}
+            </Swiper>
          </div>
 
          {/* Description */}

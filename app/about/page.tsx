@@ -49,7 +49,7 @@ const AboutPage = () => {
                   # Documentation
                </h1>
                <p className="text-sm sm:text-base text-primary">
-                  I am passionate web developer with expertise in building modern, high-performance web applications. I continuously explore new technologies and frameworks to deliver innovative solutions. check my <Link href="/blogs" className="text-sm font-medium link-color hover:link-hover whitespace-nowrap">[blogs ↗]</Link>.
+                  I am passionate web developer with expertise in building modern, high-performance web applications. I continuously explore new technologies and frameworks to deliver innovative solutions. check my <Link href="/events" className="text-sm font-medium link-color hover:link-hover whitespace-nowrap">[Events ↗]</Link>.
                </p>
             </section>
 
