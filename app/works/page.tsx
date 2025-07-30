@@ -6,6 +6,43 @@ import Link from "next/link";
 // Sample projects data
 const projects = [
    {
+      title: "ZIDIO-internship project",
+      description: "A full-stack e-commerce platform for selling t-shirts with comprehensive admin controls and customer features. Built with Next.js, Tailwind CSS, and TypeScript, this project showcases a modern design and robust functionality. The source code is available on GitHub.",
+      demoUrl: "https://zidio-project-three.vercel.app/",
+      sourceCodeUrl: "https://github.com/BuddhadebKoner/ZIDIO-PROJECT",
+      images: [
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897864/Screenshot_2025-07-30_at_23-17-49_E-commerce_turllc.png",
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897826/Screenshot_2025-07-30_at_23-19-20_E-commerce_blasgi.png",
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897823/Screenshot_2025-07-30_at_23-19-33_E-commerce_ni71mz.png",
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897815/Screenshot_2025-07-30_at_23-19-05_E-commerce_tzdmx6.png",
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897813/Screenshot_2025-07-30_at_23-18-52_E-commerce_nlxteu.png",
+      ],
+      tags: ["React-v19", "Vite", "TanStack Query", "Clerk", "Tailwind CSS-v4.0", "Spline", "Swiper.js", "Lucide-React", "Cloudinary", "Express.js", "MongoDB", "Mongoose", "Stripe"],
+   },
+   {
+      title: "AI powered Portfolio GEMINI ai",
+      description: "An AI-powered full-stack portfolio website that showcases your skills and projects. Built with Next.js, Tailwind CSS, and TypeScript, this portfolio features a modern design and integrates AI capabilities to enhance user experience. The source code is available on GitHub.",
+      demoUrl: "https://full-stack-portfolio-nine-theta.vercel.app/",
+      sourceCodeUrl: "https://github.com/BuddhadebKoner/AI-Powered-FullStack-Portfolio",
+      images: [
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1750497000/Screenshot_2025-06-20_at_10-31-47_Buddhadeb_Koner_FullStack_Web_Developer_d5qnbk.png",
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1750497003/Screenshot_2025-06-21_at_14-32-05_Buddhadeb_Koner_FullStack_Web_Developer_bbi2pm.png",
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1750497000/Screenshot_2025-06-21_at_14-32-55_Buddhadeb_Koner_FullStack_Web_Developer_li7myr.png",
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1750497006/Screenshot_2025-06-21_at_14-32-26_Buddhadeb_Koner_FullStack_Web_Developer_txkefa.png"
+      ],
+      tags: ["Next.js-v15", "React-v19", "Tailwind CSS-v4.0", "TypeScript"],
+   },
+   {
+      title: "URL Shortener",
+      description: "A modern URL shortener application built with Next.js, Tailwind CSS, and TypeScript. This project allows users to shorten long URLs and manage their links efficiently. The source code is available on GitHub.",
+      demoUrl: "https://abcredirect.vercel.app/",
+      sourceCodeUrl: "https://github.com/BuddhadebKoner/url-shortener",
+      images: [
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1749264353/Screenshot_2025-06-07_at_08-15-32_1_Post_Feed_LinkedIn_cfugl1.png"
+      ],
+      tags: ["Next.js-v15", "React-v19", "Tailwind CSS-v4.0", "TypeScript"],
+   },
+   {
       title: "Modern Portfolio Developers",
       description: "Experience a sleek and modern portfolio design tailored for developers. Built using Next.js, Tailwind CSS, and TypeScript, this project offers an elegant, responsive interface. Clone the repository and showcase your skills with this cutting-edge portfolio.",
       demoUrl: "https://buddhadebkoner.vercel.app/",
@@ -125,11 +162,11 @@ export const metadata: Metadata = {
 const Page = () => {
    return (
       <main className="min-h-screen bg-background text-primary py-25 accent-dots accent-dots">
-      {/* Add corner glow effect */}
-      <div className="corner-glow"></div>
+         {/* Add corner glow effect */}
+         <div className="corner-glow"></div>
 
-      {/* Add constellation pattern */}
-      <div className="constellation"></div>
+         {/* Add constellation pattern */}
+         <div className="constellation"></div>
          <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8 md:gap-10">
             <section className="animate-fadeIn">
                <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-highlight mb-3">

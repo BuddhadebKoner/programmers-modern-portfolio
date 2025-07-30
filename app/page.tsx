@@ -1,4 +1,4 @@
-import HeroImage from '@/components/HeroImage';
+import GitHubProfile from '@/components/GitHubProfile';
 import Link from 'next/link';
 import React from 'react';
 import type { Metadata } from "next";
@@ -16,10 +16,7 @@ const Page = () => {
       <div className="constellation"></div>
 
       <div className='w-full md:w-1/2 flex flex-col justify-start items-center gap-5'>
-        <h1 className='text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-primary text-start'>
-          Always Out Of The Box!
-        </h1>
-        <HeroImage />
+        <GitHubProfile />
       </div>
       <div className='w-full md:w-1/2 flex flex-col gap-4 text-center md:text-left'>
         <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-highlight'>
