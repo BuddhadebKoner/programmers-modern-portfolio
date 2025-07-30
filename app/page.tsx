@@ -8,17 +8,15 @@ export const metadata: Metadata = {
 };
 const Page = () => {
   return (
-    <main className="min-h-screen px-4 py-12 sm:py-16 md:py-24 bg-background text-main-text flex flex-col justify-center items-center gap-6 md:flex-row md:gap-12 lg:gap-16 accent-dots">
+    <main className="mx-auto px-4 sm:px-6 lg:px-8  flex flex-col justify-center items-center gap-6 md:flex-row md:gap-12 lg:gap-16 accent-dots max-w-7xl h-screen overflow-auto py-10">
+
       {/* Add corner glow effect */}
       <div className="corner-glow"></div>
 
       {/* Add constellation pattern */}
       <div className="constellation"></div>
 
-      <div className='w-full md:w-1/2 flex flex-col justify-start items-center gap-5'>
-        <GitHubProfile />
-      </div>
-      <div className='w-full md:w-1/2 flex flex-col gap-4 text-center md:text-left'>
+      <div className='w-full md:w-1/2 flex flex-col gap-4 text-center md:text-left lg:mt-0 md:mt-0 mt-100'>
         <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-highlight'>
           Buddhadeb Koner
         </h1>
@@ -55,6 +53,9 @@ const Page = () => {
             - [Know my story ↗]
           </Link>
         </div>
+      </div>
+      <div className='w-full md:w-1/2 flex flex-col justify-start items-center gap-5'>
+        <GitHubProfile />
       </div>
     </main>
   );

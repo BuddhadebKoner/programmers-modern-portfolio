@@ -88,7 +88,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <Navbar />
-          <section className="z-10">{children}</section>
+          <section className="z-10 bg-background text-main-text">{children}</section>
           <Analytics />
         </ThemeProvider>
       </body>

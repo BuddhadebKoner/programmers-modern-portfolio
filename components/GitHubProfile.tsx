@@ -248,7 +248,7 @@ const GitHubProfile = () => {
    }
 
    return (
-      <div className='relative w-full max-w-md h-fit flex flex-col gap-4'>
+      <div className='relative w-full max-w-md h-fit flex flex-col gap-4 mt-10'>
          {/* GitHub Profile Card */}
          <div className="bg-background-secondary border border-theme rounded-lg p-4 transition-all duration-300 hover:border-highlight-secondary">
             <div className="flex items-center gap-3 mb-3">
@@ -315,15 +315,6 @@ const GitHubProfile = () => {
                   <div className="text-secondary text-xs">languages</div>
                </div>
             </div>
-
-            <a
-               href={githubData.html_url}
-               target="_blank"
-               rel="noopener noreferrer"
-               className="block w-full text-center bg-accent-green hover:bg-accent-green-light text-background-primary font-medium py-2 px-4 rounded transition-colors duration-200"
-            >
-               [View Profile ↗]
-            </a>
          </div>
 
          {/* Top Languages */}
