@@ -15,7 +15,7 @@ const Page = () => {
 
       <LickyCodeBackground variant="home" />
 
-      <div className='w-full md:w-1/2 max-w-2xl flex flex-col gap-4 text-center md:text-left'>
+      <div className='w-full md:w-1/2 max-w-2xl flex flex-col gap-4 text-center md:text-left mt-30 lg:mt-0 md:mt-0'>
         <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-highlight font-mono'>
           Buddhadeb Koner
         </h1>
