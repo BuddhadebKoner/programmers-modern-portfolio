@@ -75,10 +75,17 @@ const TimelineNavigation = ({ projects }: {
          className="navigatebox fixed z-50 sm:right-4 right-2 bottom-16 sm:bottom-auto sm:top-1/2 sm:transform sm:-translate-y-1/2"
          aria-label="Project navigation"
       >
+         {/* Licky Code Background Elements */}
+         <div className="absolute -top-2 -right-2 text-accent-green opacity-20 font-mono text-xs pointer-events-none">
+            {'[]'}
+         </div>
+         <div className="absolute -bottom-2 -left-2 text-link-color opacity-15 font-mono text-xs pointer-events-none">
+            {'// nav'}
+         </div>
+
          <div
             className={`
-               bg-background-secondary border border-theme rounded-lg p-3 shadow-lg 
-               transition-all duration-300 ease-in-out
+               bg-background-secondary border border-theme rounded-lg p-3 shadow-lg relative
                ${isExpanded ? 'opacity-100' : 'opacity-90 hover:opacity-100'}
                ${isExpanded ? 'scale-100' : 'scale-95 hover:scale-100'}
             `}
@@ -88,20 +95,20 @@ const TimelineNavigation = ({ projects }: {
                className="
                   cursor-pointer w-full flex items-center justify-center gap-2 p-2 rounded-md 
                   bg-theme/20 hover:bg-theme/40 active:bg-theme/50
-                  transition-all duration-200 ease-in-out text-sm
+                  text-sm font-mono
                "
                aria-label={isExpanded ? "Scroll to top" : "Open navigation menu"}
             >
                {isExpanded ? (
                   <>
-                     <ArrowUp size={14} className="transition-transform duration-200" />
-                     <span>Top</span>
-                     <ArrowUp size={14} className="transition-transform duration-200" />
+                     <ArrowUp size={14} />
+                     <span>{`// top`}</span>
+                     <ArrowUp size={14} />
                   </>
                ) : (
                   <>
-                     <ChevronDown size={16} className="transition-transform duration-200" />
-                     <span className="sm:block hidden">Navigate</span>
+                     <ChevronDown size={16} />
+                     <span className="sm:block hidden">{"{ nav }"}</span>
                   </>
                )}
             </button>
@@ -109,6 +116,9 @@ const TimelineNavigation = ({ projects }: {
             {isExpanded && (
                <>
                   <div className="w-full h-px bg-theme/30 my-3"></div>
+                  <div className="text-xs text-accent-green opacity-60 font-mono mb-2">
+                     {'/* projects */'}
+                  </div>
 
                   <nav className="flex flex-col gap-2 max-h-[40vh] sm:max-h-[240px] overflow-y-auto custom-scrollbar">
                      {projects.map((project, index) => (
@@ -116,8 +126,7 @@ const TimelineNavigation = ({ projects }: {
                            key={index}
                            onClick={() => scrollToProject(index)}
                            className={`
-                              cursor-pointer text-left px-3 py-2 rounded-md text-sm 
-                              transition-all duration-200 ease-in-out
+                              cursor-pointer text-left px-3 py-2 rounded-md text-sm font-mono
                               focus:outline-none focus:ring-1 focus:ring-highlight/50
                               ${activeProject === index
                                  ? 'bg-highlight/20 text-highlight font-medium'
@@ -126,7 +135,9 @@ const TimelineNavigation = ({ projects }: {
                            `}
                            aria-current={activeProject === index ? "true" : "false"}
                         >
-                           {project.title.length > 25 ? `${project.title.slice(0, 25)}...` : project.title}
+                           <span className="text-accent-green opacity-60">-[</span>
+                           {project.title.length > 20 ? `${project.title.slice(0, 20)}...` : project.title}
+                           <span className="text-accent-green opacity-60">]</span>
                         </button>
                      ))}
                   </nav>
@@ -138,14 +149,14 @@ const TimelineNavigation = ({ projects }: {
                      className="
                         w-full flex items-center justify-center gap-2 p-2 rounded-md 
                         hover:bg-theme/20 active:bg-theme/30
-                        transition-all duration-200 ease-in-out text-sm
+                        text-sm font-mono
                         focus:outline-none focus:ring-2 focus:ring-highlight/50
                      "
                      aria-label="Close navigation menu"
                   >
-                     <ChevronUp size={14} className="transition-transform duration-200" />
-                     <span>Collapse</span>
-                     <ChevronUp size={14} className="transition-transform duration-200" />
+                     <ChevronUp size={14} />
+                     <span>{'</>'}</span>
+                     <ChevronUp size={14} />
                   </button>
                </>
             )}

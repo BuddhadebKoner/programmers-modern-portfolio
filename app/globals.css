@@ -201,171 +201,376 @@ body {
   box-shadow: 0 8px 32px 0 var(--glass-shadow);
 }
 
-/* Add these styles to your existing CSS file */
-
-/* Background pattern */
-.bg-background {
+/* Licky Code Background Styles */
+.licky-code-bg {
   background-color: var(--background-primary);
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  min-height: 100vh;
+  width: 100%;
 }
 
-/* Grid pattern overlay */
-.bg-background::before {
-  content: "";
+/* Code Grid Lines */
+.code-grid {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   background-image:
-    linear-gradient(to right, var(--border-color) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
-  background-size: 50px 50px;
-  opacity: 0.15;
-  z-index: -1;
-}
-
-/* Diagonal lines */
-.bg-background::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    repeating-linear-gradient(45deg, var(--highlight-primary) 0, var(--highlight-primary) 1px, transparent 1px, transparent 50px);
-  opacity: 0.03;
-  z-index: -1;
-}
-
-/* Add this class to create accent dots at intersections */
-.accent-dots {
-  position: relative;
-}
-
-/* Enhanced accent dots with staggered pattern */
-.accent-dots::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    radial-gradient(var(--highlight-primary) 1px, transparent 1px),
-    radial-gradient(var(--accent-yellow) 1px, transparent 1px);
-  background-size: 50px 50px, 50px 50px;
-  background-position: 0 0, 25px 25px;
+    linear-gradient(to right, var(--highlight-primary) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--highlight-primary) 1px, transparent 1px);
+  background-size: 40px 40px;
   opacity: 0.1;
-  z-index: -1;
-  animation: subtleFloat 120s infinite linear;
+  z-index: -3;
+  animation: gridPulse 4s ease-in-out infinite;
 }
 
-/* Multiple soft glows for more depth */
-.corner-glow {
-  position: absolute;
-  overflow: hidden;
-  z-index: -2;
-}
+/* Grid pulse animation */
+@keyframes gridPulse {
 
-.corner-glow::before {
-  content: "";
-  position: absolute;
-  top: -150px;
-  right: -150px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, var(--accent-green-light) 0%, transparent 70%);
-  opacity: 0.12;
-  border-radius: 50%;
-  filter: blur(50px);
-}
-
-.corner-glow::after {
-  content: "";
-  position: absolute;
-  bottom: -100px;
-  left: -100px;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, var(--link-color) 0%, transparent 70%);
-  opacity: 0.08;
-  border-radius: 50%;
-  filter: blur(60px);
-}
-
-/* Add subtle floating animation */
-@keyframes subtleFloat {
-  0% {
-    background-position: 0 0, 25px 25px;
+  0%,
+  100% {
+    opacity: 0.1;
   }
 
   50% {
-    background-position: 25px 25px, 0 0;
-  }
-
-  100% {
-    background-position: 50px 50px, 25px 25px;
+    opacity: 0.15;
   }
 }
 
-/* Add this class to create constellation-like connected dots */
-.constellation {
+/* Floating Code Elements */
+.floating-code-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.code-float {
+  position: absolute;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 18px;
+  color: var(--accent-green);
+  opacity: 0.3;
+  animation: codeFloat 15s infinite linear;
+}
+
+.code-float-1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: -2s;
+}
+
+.code-float-2 {
+  top: 60%;
+  right: 15%;
+  animation-delay: -5s;
+}
+
+.code-float-3 {
+  bottom: 30%;
+  left: 20%;
+  animation-delay: -8s;
+}
+
+.code-float-4 {
+  top: 40%;
+  left: 80%;
+  animation-delay: -11s;
+}
+
+.code-float-5 {
+  bottom: 15%;
+  right: 25%;
+  animation-delay: -14s;
+}
+
+.code-float-6 {
+  top: 15%;
+  right: 40%;
+  animation-delay: -17s;
+}
+
+@keyframes codeFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+
+  25% {
+    transform: translateY(-20px) rotate(90deg);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+    opacity: 0.3;
+  }
+
+  75% {
+    transform: translateY(-30px) rotate(270deg);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: translateY(0px) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+/* Creative Text Elements */
+.creative-text-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.creative-text {
+  position: absolute;
+  font-family: var(--font-caveat), cursive;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--link-color);
+  opacity: 0.25;
+  animation: textFloat 20s infinite ease-in-out;
+}
+
+.creative-text-1 {
+  top: 25%;
+  right: 10%;
+  animation-delay: -3s;
+}
+
+.creative-text-2 {
+  bottom: 40%;
+  left: 15%;
+  animation-delay: -8s;
+}
+
+.creative-text-3 {
+  top: 70%;
+  right: 30%;
+  animation-delay: -13s;
+}
+
+.creative-text-4 {
+  top: 10%;
+  left: 30%;
+  animation-delay: -18s;
+}
+
+@keyframes textFloat {
+
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.25;
+  }
+
+  33% {
+    transform: translateY(-15px) scale(1.05);
+    opacity: 0.4;
+  }
+
+  66% {
+    transform: translateY(10px) scale(0.95);
+    opacity: 0.3;
+  }
+}
+
+/* SVG Arrow Elements */
+.svg-arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.arrow {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  color: var(--accent-yellow);
+  opacity: 0.2;
+  animation: arrowMove 12s infinite linear;
+}
+
+.arrow-1 {
+  top: 30%;
+  left: 5%;
+  animation-delay: -1s;
+}
+
+.arrow-2 {
+  bottom: 20%;
+  right: 8%;
+  animation-delay: -6s;
+}
+
+.arrow-3 {
+  top: 60%;
+  left: 70%;
+  animation-delay: -11s;
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.2;
+  }
+
+  25% {
+    transform: translate(20px, -10px) rotate(45deg);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translate(10px, 20px) rotate(90deg);
+    opacity: 0.3;
+  }
+
+  75% {
+    transform: translate(-15px, 5px) rotate(135deg);
+    opacity: 0.35;
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(180deg);
+    opacity: 0.2;
+  }
+}
+
+/* Light theme adjustments */
+.light .code-grid {
+  background-image:
+    linear-gradient(to right, var(--highlight-secondary) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--highlight-secondary) 1px, transparent 1px);
+  opacity: 0.08;
+}
+
+.light .code-float {
+  color: var(--accent-green);
+  opacity: 0.25;
+}
+
+.light .creative-text {
+  color: var(--link-color);
+  opacity: 0.2;
+}
+
+.light .arrow {
+  color: var(--accent-orange);
+  opacity: 0.15;
+}
+
+/* Enhanced Responsive Design for Licky Code Elements */
+@media (max-width: 768px) {
+  .code-float {
+    font-size: 14px;
+  }
+
+  .creative-text {
+    font-size: 18px;
+  }
+
+  .arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .code-grid {
+    background-size: 30px 30px, 30px 30px, 60px 60px, 90px 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .code-float {
+    font-size: 12px;
+  }
+
+  .creative-text {
+    font-size: 16px;
+  }
+
+  .arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  .code-grid {
+    background-size: 25px 25px, 25px 25px, 50px 50px, 75px 75px;
+  }
+}
+
+/* Performance optimizations */
+.licky-code-bg {
+  will-change: auto;
+}
+
+.code-grid,
+.floating-code-elements,
+.creative-text-elements,
+.svg-arrows {
+  will-change: transform, opacity;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+
+  .code-grid,
+  .code-float,
+  .creative-text,
+  .arrow {
+    animation: none;
+  }
+
+  .code-grid {
+    opacity: 0.05;
+  }
+
+  .code-float,
+  .creative-text,
+  .arrow {
+    opacity: 0.1;
+  }
+}
+
+/* GitHub Card Licky Code Style */
+.github-card-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.github-card-bg::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-image:
-    repeating-linear-gradient(45deg, transparent 0, transparent 24px, var(--highlight-secondary) 25px, transparent 26px),
-    repeating-linear-gradient(-45deg, transparent 0, transparent 49px, var(--accent-green) 50px, transparent 51px);
-  background-size: 100px 100px;
+    linear-gradient(45deg, var(--accent-green) 1px, transparent 1px),
+    linear-gradient(-45deg, var(--link-color) 1px, transparent 1px);
+  background-size: 20px 20px;
   opacity: 0.03;
-  z-index: -1;
-}
-
-/* Balanced Light theme specific pattern adjustments */
-.light .bg-background::before {
-  /* Grid pattern overlay */
-  background-image:
-    linear-gradient(to right, rgba(124, 149, 55, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(124, 149, 55, 0.15) 1px, transparent 1px);
-  opacity: 0.3;
-}
-
-.light .bg-background::after {
-  /* Diagonal lines */
-  background-image:
-    repeating-linear-gradient(45deg, rgba(124, 149, 55, 0.1) 0, rgba(124, 149, 55, 0.1) 1px, transparent 1px, transparent 50px);
-  opacity: 0.2;
-}
-
-.light .accent-dots::before {
-  /* Enhanced accent dots with staggered pattern */
-  background-image:
-    radial-gradient(rgba(124, 149, 55, 0.2) 1px, transparent 1px),
-    radial-gradient(rgba(58, 76, 130, 0.15) 1px, transparent 1px);
-  opacity: 0.25;
-}
-
-.light .corner-glow::before {
-  background: radial-gradient(circle, rgba(124, 149, 55, 0.15) 0%, transparent 70%);
-  opacity: 0.2;
-}
-
-.light .corner-glow::after {
-  background: radial-gradient(circle, rgba(64, 101, 184, 0.1) 0%, transparent 70%);
-  opacity: 0.15;
-}
-
-.light .constellation {
-  background-image:
-    repeating-linear-gradient(45deg, transparent 0, transparent 24px, rgba(58, 76, 130, 0.1) 25px, transparent 26px),
-    repeating-linear-gradient(-45deg, transparent 0, transparent 49px, rgba(124, 149, 55, 0.12) 50px, transparent 51px);
-  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Swiper custom styles */

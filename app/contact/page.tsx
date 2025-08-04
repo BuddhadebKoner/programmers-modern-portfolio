@@ -2,6 +2,7 @@ import React from 'react';
 import MediaCard from "@/components/MediaCard";
 import ContactForm from "@/components/ContactForm";
 import type { Metadata } from "next";
+import LickyCodeBackground from '@/components/LickyCodeBackground';
 
 export const metadata: Metadata = {
    title: "Contact - Get in Touch | Buddhadeb Koner",
@@ -72,13 +73,9 @@ const page = () => {
    ];
 
    return (
-      <main className="min-h-screen bg-background text-primary py-25 accent-dots">
-      {/* Add corner glow effect */}
-      <div className="corner-glow"></div>
-
-      {/* Add constellation pattern */}
-      <div className="constellation"></div>
-         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8 md:gap-10">
+      <main className="min-h-screen licky-code-bg text-primary py-25 relative">
+         <LickyCodeBackground />
+         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8 md:gap-10 relative z-10">
             <section className="w-full animate-fadeIn">
                <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-highlight mb-2 sm:mb-3 pl-3 py-1">
                   # Get in touch

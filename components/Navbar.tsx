@@ -72,8 +72,11 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-100 bg-glass">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
-        <Link href="/" className="font-bold text-xl text-highlight flex-shrink-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center relative">
+        {/* Licky Code Elements */}
+        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 text-accent-green opacity-10 font-mono text-xs pointer-events-none">{'// navbar'}</div>
+
+        <Link href="/" className="font-bold text-xl text-highlight flex-shrink-0 font-mono">
           [Home ↗]
         </Link>
 
@@ -81,7 +84,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             onKeyDown={(e) => handleKeyDown(e)}
-            className="p-2 rounded-md hover:bg-accent focus:outline-none transition-colors"
+            className="p-2 rounded-md hover:bg-accent focus:outline-none"
             aria-label="Toggle Theme"
             aria-haspopup="true"
             aria-expanded={isDropdownOpen}
@@ -103,7 +106,7 @@ const Navbar = () => {
                 }}
                 onClick={() => handleToggleTheme("light")}
                 onKeyDown={(e) => handleKeyDown(e, 0)}
-                className={`${theme === "light" ? "bg-accent" : ""} flex items-center w-full px-4 py-2 text-sm text-left hover:bg-accent text-primary`}
+                className={`${theme === "light" ? "bg-accent" : ""} flex items-center w-full px-4 py-2 text-sm text-left hover:bg-accent text-primary font-mono`}
                 role="menuitem"
               >
                 <Sun className="w-4 h-4 mr-3" />
@@ -115,7 +118,7 @@ const Navbar = () => {
                 }}
                 onClick={() => handleToggleTheme("dark")}
                 onKeyDown={(e) => handleKeyDown(e, 1)}
-                className={`${theme === "dark" ? "bg-accent" : ""} flex items-center w-full px-4 py-2 text-sm text-left hover:bg-accent text-primary`}
+                className={`${theme === "dark" ? "bg-accent" : ""} flex items-center w-full px-4 py-2 text-sm text-left hover:bg-accent text-primary font-mono`}
                 role="menuitem"
               >
                 <Moon className="w-4 h-4 mr-3" />
@@ -127,7 +130,7 @@ const Navbar = () => {
                 }}
                 onClick={() => handleToggleTheme("system")}
                 onKeyDown={(e) => handleKeyDown(e, 2)}
-                className={`${theme === "system" ? "bg-accent" : ""} flex items-center w-full px-4 py-2 text-sm text-left hover:bg-accent text-primary`}
+                className={`${theme === "system" ? "bg-accent" : ""} flex items-center w-full px-4 py-2 text-sm text-left hover:bg-accent text-primary font-mono`}
                 role="menuitem"
               >
                 <Monitor className="w-4 h-4 mr-3" />

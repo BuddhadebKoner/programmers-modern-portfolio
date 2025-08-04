@@ -11,7 +11,8 @@ const nextConfig: NextConfig = {
       "github-readme-streak-stats.herokuapp.com",
       "raw.githubusercontent.com",
       "cdn.jsdelivr.net",
-      "i.imgur.com"
+      "i.imgur.com",
+      "images.remotePatterns"
     ],
   },
 };
